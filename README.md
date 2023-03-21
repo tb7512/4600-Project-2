@@ -10,8 +10,13 @@ Types of shell builtins we can pick from
 -zsh
 
 Members and Builtin chosen
+
 Thijmen Bakker - pwd
+
 Anthony Tringali - 
+
 Dajanek Davis - 
+
 Jorge Guzman - 
+
 Mahmoud Algharbawi - 
