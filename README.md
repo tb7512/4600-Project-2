@@ -18,7 +18,7 @@ Anthony Tringali - sh
 
 Dajanek Davis -
 
-Jorge Guzman -
+Jorge Guzman - ls
 
 Mahmoud Algharbawi -
 
