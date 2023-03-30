@@ -14,7 +14,7 @@ Types of shell builtins we can pick from -sh -bash -csh -tcsh -ksh -zsh
 
 Thijmen Bakker - pwd
 
-Anthony Tringali - sh
+Anthony Tringali - echo
 
 Dajanek Davis -
 
