@@ -7,7 +7,7 @@ Types of shell builtins we can pick from -sh -bash -csh -tcsh -ksh -zsh
 
 [Bash Builtins](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html)
 
-[csh and tcsh Builtins](https://engineering.unt.edu/events/2022/senior-design-day-open-house-competition)
+[csh and tcsh Builtins](https://docstore.mik.ua/orelly/linux/lnut/ch08_09.htm)
 
 
 # Members and Builtin chosen
