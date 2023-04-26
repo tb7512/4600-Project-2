@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func listFiles() {
+func ListFiles() {
 	directory := "."		//current directory name
 
 	dir, err := os.Open(directory)	//opens the directory
