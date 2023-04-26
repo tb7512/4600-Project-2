@@ -79,11 +79,11 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	case "env":
 		return builtins.EnvironmentVariables(w, args...)
 	case "ls":
-		fmt.Println("ls command here")
+		//return builtins.ListFiles()
 		return ListFiles()
 	case "exit":
 		exit <- struct{}{}
-	return nil
+		return nil
 	}
 
 	return executeCommand(name, args...)
@@ -106,16 +106,18 @@ func executeCommand(name string, arg ...string) error {
 */
 
 func ListFiles() error {
-	directory := "."		//current directory name
+	fmt.Println("ls command heresdfsdf")
 
-	dir, err := os.Open(directory)	//opens the directory
-	if (err != nil) {
+	directory := "." //current directory name
+
+	dir, err := os.Open(directory) //opens the directory
+	if err != nil {
 		fmt.Println(err)
 		return err
 	}
 
-	files, err := dir.Readdir(-1)		//reads files and directories inside current WD, return a list of FileInfo objects
-	if (err != nil) {
+	files, err := dir.Readdir(-1) //reads files and directories inside current WD, return a list of FileInfo objects
+	if err != nil {
 		fmt.Println(err)
 		return err
 	}
@@ -124,7 +126,7 @@ func ListFiles() error {
 	//files is the list of FileInfo objects returned by Readdir
 	//loop through each file in files
 	for _, file := range files {
-		fmt.Println(file.Name());
+		fmt.Println(file.Name())
 	}
 
 	//close the directory
