@@ -78,9 +78,32 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 		return builtins.ChangeDirectory(args...)
 	case "env":
 		return builtins.EnvironmentVariables(w, args...)
+	case "ls":
+		fmt.Println("ls command here")
+		// directory := "."		//current directory name
+
+		// dir, err := os.Open(directory)	//opens the directory
+		// if (err != nil) {
+		// 	fmt.Println(err)
+		// }
+	
+		// files, err := dir.Readdir(-1)		//reads files and directories inside current WD, return a list of FileInfo objects
+		// if (err != nil) {
+		// 	fmt.Println(err)
+		// }
+	
+		// //file is each FileInfo object returned by Readdir above
+		// //files is the list of FileInfo objects returned by Readdir
+		// //loop through each file in files
+		// for _, file := range files {
+		// 	fmt.Println(file.Name());
+		// }
+	
+		// //close the directory
+		// dir.Close()
 	case "exit":
 		exit <- struct{}{}
-		return nil
+	return nil
 	}
 
 	return executeCommand(name, args...)
