@@ -5,19 +5,19 @@ import (
 	"os"
 )
 
-func ListFiles() {
+func ListFiles() error {
 	directory := "."		//current directory name
 
 	dir, err := os.Open(directory)	//opens the directory
 	if (err != nil) {
 		fmt.Println(err)
-		return
+		return err
 	}
 
 	files, err := dir.Readdir(-1)		//reads files and directories inside current WD, return a list of FileInfo objects
 	if (err != nil) {
 		fmt.Println(err)
-		return
+		return err
 	}
 
 	//file is each FileInfo object returned by Readdir above
@@ -29,4 +29,5 @@ func ListFiles() {
 
 	//close the directory
 	dir.Close()
+	return nil
 }
