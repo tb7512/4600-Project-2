@@ -12,7 +12,7 @@ var (
 	ErrInvalidArg = errors.New("invalid argument")
 )
 
-func pwd(w io.Writer, args ...string) error {
+func workingDirectory(w io.Writer, args ...string) error {
 	if len(args) > 1 {
 		return fmt.Errorf("Too many arguments")
 	}
