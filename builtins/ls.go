@@ -6,6 +6,7 @@ import (
 )
 
 func ListFiles() error {
+	fmt.Println("List Files")
 	directory := "."		//current directory name
 
 	dir, err := os.Open(directory)	//opens the directory

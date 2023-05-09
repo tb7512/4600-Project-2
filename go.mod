@@ -1,15 +1,16 @@
-module test3
+module github.com/tb7512/4600-Project-2
 
 go 1.20
 
 require (
-	github.com/jh125486/CSCE4600 v0.0.0-20230208010156-9ea48276e8f0
-	github.com/stretchr/testify v1.8.2
-	github.com/tb7512/4600-Project-2 v0.0.0-20230425003957-ec6e54d293cb
+	github.com/olekukonko/tablewriter v0.0.5
+	github.com/stretchr/testify v1.8.1
 )
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/mattn/go-runewidth v0.0.14 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/rivo/uniseg v0.4.3 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
