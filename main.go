@@ -68,7 +68,7 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	input = strings.TrimSpace(input)
 
 	builtins.AddCommandToHistory(input)
-	
+
 	// Split the input separate the command name and the command arguments.
 	args := strings.Split(input, " ")
 	name, args := args[0], args[1:]
