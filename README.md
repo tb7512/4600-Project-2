@@ -16,7 +16,7 @@ Thijmen Bakker - pwd
 
 Anthony Tringali - echo
 
-Dajanek Davis -
+Dajanek Davis - rm
 
 Jorge Guzman - ls
 
