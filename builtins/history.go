@@ -55,29 +55,28 @@ func History(w io.Writer, args ...string) error {
 			for i := len(history) - 1; i >= 0; i-- {
 				_, _ = fmt.Fprintf(w, "%d %s\n", i+1, history[i])
 			}
-		} else {
+		} else if n > 0{ // Display a specific number of commands.
+			 
+			if n > len(history) {
+				n = len(history)
+			}
+			if printR {
+				// Print the last n commands in reverse order.
+				for i := len(history) - n; i < len(history); i++ {
+					_, _ = fmt.Fprintf(w, "%d %s\n", i+1, history[i])
+				}
+			} else {
+				for i := 0; i < n; i++ {
+					_, _ = fmt.Fprintf(w, "%d %s\n", i+1, history[i])
+				}
+			}
+		} else{
+			//print all
 			for i, cmd := range history {
 				_, _ = fmt.Fprintf(w, "%d %s\n", i+1, cmd)
 			}
 		}
 	}
-
-	// Display a specific number of commands.
-	if n > 0 {
-		if n > len(history) {
-			n = len(history)
-		}
-		if printR {
-			// Print the last n commands in reverse order.
-			for i := len(history) - n; i < len(history); i++ {
-				_, _ = fmt.Fprintf(w, "%d %s\n", i+1, history[i])
-			}
-		} else {
-			for i := 0; i < n; i++ {
-				_, _ = fmt.Fprintf(w, "%d %s\n", i+1, history[i])
-			}
-		}
-	}
-
+	
 	return nil
 }
